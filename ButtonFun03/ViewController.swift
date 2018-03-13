@@ -12,15 +12,22 @@ class ViewController: UIViewController {
 
     
 var count = 0
+    @IBOutlet weak var resualtLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         view.backgroundColor = UIColor.yellow
     }
 
+    
     @IBAction func ButtonPressed(_ sender: Any) {
+        
         count = count + 1
         print("\(count) Button Pressed!!")
+        
+        resualtLabel.text = "\(count) Button Pressed!!"
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
